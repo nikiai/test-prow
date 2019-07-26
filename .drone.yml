@@ -12,6 +12,12 @@ steps:
    when:
       changeset:
         includes: [ OWNERS ]
+        
+- name: finisher
+    image: alpine
+    commands:
+      - echo finished
+
 
 trigger:
   branch:
