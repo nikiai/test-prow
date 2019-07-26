@@ -11,12 +11,12 @@ steps:
    - echo hi
   when:
     changeset:
-      includes: [ OWNERS, README.* ]
+      includes: [ "OWNERS", "README.*" ]
         
 - name: finisher
   image: alpine
   commands:
-      - echo finished
+   - echo finished
 
 
 trigger:
