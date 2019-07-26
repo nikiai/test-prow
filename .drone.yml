@@ -6,16 +6,16 @@ clone:
   
 steps:
 - name: test
-   image: alpine
-   commands:
-     - echo hi
-   when:
-      changeset:
-        includes: [ OWNERS ]
+  image: alpine
+  commands:
+   - echo hi
+  when:
+    changeset:
+      includes: [ OWNERS, README.* ]
         
 - name: finisher
-    image: alpine
-    commands:
+  image: alpine
+  commands:
       - echo finished
 
 
