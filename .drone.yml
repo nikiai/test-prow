@@ -3,6 +3,15 @@ name: default
 
 clone:
   depth: 1
+  
+steps:
+- name: test
+   image: alpine
+   commands:
+     - echo hi
+   when:
+      changeset:
+        includes: [ OWNERS ]
 
 trigger:
   branch:
